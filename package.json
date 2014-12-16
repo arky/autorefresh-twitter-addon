@@ -1,9 +1,12 @@
 {
-    "name": "twitter_autorefresh",
-    "license": "MPL 2.0",
-    "author": "Arky",
-    "version": "0.3",
-    "fullName": "Twitter_Autorefresh",
-    "id": "jid1-3P6ZUb9u2yIOjg",
-    "description": "Addon to reload tweets automatically"
+  "title": "twitter_autorefresh",
+  "name": "twitterAutorefresh",
+  "version": "0.0.4",
+  "description": "Addon to reload tweets automatically",
+  "main": "index.js",
+  "author": "Arky",
+  "engines": {
+    "firefox": ">=33.0a1"
+  },
+  "license": "MPL 2.0"
 }

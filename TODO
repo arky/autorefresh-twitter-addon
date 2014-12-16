@@ -2,3 +2,4 @@ TODO
 * Retain screen position: Get visible tweet list element from screen viewport and scroll to that element after click event.
 * Rewrite using the new Event Observer API
 * Add add-on widget icon to enable/disable the addon
+* Add new icon 
