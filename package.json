@@ -1,6 +1,6 @@
 {
   "title": "twitter_autorefresh",
-  "name": "twitterAutorefresh",
+  "name": "twitterautorefresh",
   "version": "0.0.4",
   "description": "Addon to reload tweets automatically",
   "main": "index.js",
