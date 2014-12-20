@@ -1,13 +1,29 @@
 // select the target node
-//var target = document.getElementsByClassName("new-tweets-bar");
-//var target = document.getElementsByClassName("content-header");
+var target = document.querySelector("page-container");
 //console.log(target);
 
 // create an observer instance
 var observer = new MutationObserver(function(mutations) {
-      if (document.getElementsByClassName("new-tweets-bar").length) {                                                                                           document.getElementsByClassName('new-tweets-bar')[0].click();                                                                                          console.log("Reloading fresh Tweets");      
-       };           
-    console.log("Mutation Noticed");
+   /*   if (document.getElementsByClassName("new-tweets-bar").length) {                                                                                           document.getElementsByClassName('new-tweets-bar')[0].click();                                                                                          console.log("Reloading fresh Tweets");      
+
+
+    mutations.forEach(function(mutation) {
+    console.log(mutation.type);
+  });   
+
+*/
+
+    mutations.forEach(function(mutation) {
+// or use all mutation records is entirely up to you
+      var entry = {
+        mutation: mutation,
+        el: mutation.target,
+        value: mutation.target.textContent,
+        oldValue: mutation.oldValue
+      };
+      console.log('Recording mutation:', entry);
+     
+   });
 });
  
 // configuration of the observer:
