@@ -1,8 +1,8 @@
 var self = require('sdk/self');
 var pageMod = require("sdk/page-mod");
-var { ToggleButton } = require("sdk/ui/button/toggle");
+var { ActionButton } = require("sdk/ui/button/action");
 
-var button = ToggleButton({
+var button = ActionButton({
   id: "twitter-autorefresh",
   label: "Twitter Autorefresh",
   icon: {
@@ -10,7 +10,6 @@ var button = ToggleButton({
     "32": "./icon-32.png",
     "64": "./icon-64.png"
   },
-  onChange: changed,
   badge: "",
   badgeColor: "#00AAA"
 });
@@ -23,30 +22,3 @@ pageMod.PageMod({
   contentScriptFile: self.data.url("refresh.js")
 });
 
-/*
-// Toggle Addon 
-
-function changed(state) {
-  if (state.checked) {
-    button.badgeColor = "#AA00AA";
-    button.badge = "X";
-    button.label = "Twitter Autorefresh (Paused)"
-      if (typeof observer.disconnect == "function") { 
-	  // Remove Mutation Observer 
-	  observer.disconnect();
-	  console.log("Twitter Autorefresh removed");
-      }
-}
-  else {
-    button.badgeColor = "#00AAA";
-     button.badge = "";  
-      if (typeof osberver.observer == "function"){
-	  //Restart Mutation Observer 
-	  observer.observe(document.body, config);
-	  console.log("Twitter Autorefresh re-enabled");
-	 }
-}
-
-};
-
-*/
