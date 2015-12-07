@@ -2,7 +2,7 @@
   "title": "twitter_autorefresh",
   "name": "twitterautorefresh",
   "id" : "jid1-3P6ZUb9u2yIOjg@jetpack",                                 
-  "version": "0.0.5",
+  "version": "0.3.2",
   "description": "Addon to reload tweets automatically",
   "main": "index.js",
   "author": "Arky",
