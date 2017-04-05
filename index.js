@@ -11,7 +11,8 @@ var button = ActionButton({
     "64": "./icon-64.png"
   },
   badge: "",
-  badgeColor: "#00AAA"
+  badgeColor: "#00AAA",
+  onClick: toggle_autorefresh
 });
 
 // Listens for twitter.com pages
@@ -22,3 +23,18 @@ pageMod.PageMod({
   contentScriptFile: self.data.url("refresh.js")
 });
 
+// Toggle autorefresh
+var active = true;
+function toggle_autorefresh(state) {
+  if (active) {
+    active = false;
+    button.state("window", {
+      label: "Twitter Autorefresh - Enable"
+    });
+  } else {
+    active = true;
+    button.state("window", {
+      label: "Twitter Autorefresh - Disable"
+    });
+  }
+}
