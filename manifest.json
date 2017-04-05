@@ -1,0 +1,21 @@
+{
+
+  "description": "Addon to reload tweets automatically",
+  "manifest_version": 2,
+  "name": "twitterautorefresh",
+  "version": "0.4.0",
+  "homepage_url": "https://github.com/arky/autorefresh-twitter-addon",
+  "icons": {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["refresh.js"]
+    }
+  ]
+
+}
