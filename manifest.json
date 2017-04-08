@@ -16,7 +16,11 @@
   ],
 
   "browser_action": {
-    "default_icon": "icon-32.png",
+    "default_icon": {
+      "16": "./icon-16.png",
+      "32": "./icon-32.png",
+      "64": "./icon-64.png"
+    },
     "default_title": "Addon to reload tweets automatically"
   },
 
